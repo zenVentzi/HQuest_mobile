@@ -1,14 +1,28 @@
-import React, {Fragment, Component} from 'react';
-import { Button, View, TouchableOpacity, Text } from 'react-native';
+import React, { Fragment, Component } from 'react';
+import { View, TouchableOpacity } from 'react-native';
+import { NavigationScreenProp } from 'react-navigation';
+import { Text } from 'native-base';
 
-export default class HomeScreen extends React.Component<any,any> {
+interface HomeScreenProps {
+  navigation: NavigationScreenProp<any, any>;
+}
+
+export default class HomeScreen extends React.Component<HomeScreenProps, any> {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "black" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'black',
+        }}>
         <TouchableOpacity onPress={this.props.navigation.openDrawer}>
-          <Text style={{color: "white"}}>Open Drawer</Text>
+          <Text style={{ color: 'white' }}>Open Drawer</Text>
         </TouchableOpacity>
-        <Text style={{ fontWeight: 'bold', color: "white", marginTop: 20 }}>Home</Text>
+        <Text style={{ fontWeight: 'bold', color: 'white', marginTop: 20 }}>
+          Home
+        </Text>
       </View>
     );
   }
