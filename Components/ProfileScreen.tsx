@@ -1,16 +1,12 @@
 import React, { Fragment, Component } from 'react';
-import { Text, StyleSheet, View, Image, Switch } from 'react-native';
+import { Text, StyleSheet, View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import TextButton from './Reusable/TextButton';
+import Questions from './Questions';
 
 export default class ProfileScreen extends Component<any, any> {
-  state = {
-    showAnsweredQuestions: true,
-  };
-
   render() {
     const isPersonal = false;
-    const b = 5;
 
     return (
       <View style={styles.container}>
@@ -34,20 +30,7 @@ export default class ProfileScreen extends Component<any, any> {
           )}
           <TextButton title={`Followers`} onPress={() => {}} />
         </View>
-        {/* isPersonal */ true && (
-          <View style={styles.answeredSwitchContainer}>
-            <Text style={styles.answeredText}>Show answered questions: </Text>
-            <Switch
-              value={this.state.showAnsweredQuestions}
-              onValueChange={val => {
-                // Alert.alert(`${val}`);
-                this.setState({ showAnsweredQuestions: val });
-              }}
-              thumbColor="gray"
-              trackColor={{ true: 'white', false: 'white' }}
-            />
-          </View>
-        )}
+        <Questions />
       </View>
     );
   }
@@ -85,17 +68,5 @@ const styles = StyleSheet.create({
   },
   followBtn: {
     marginRight: 5,
-  },
-  showAnsweredText: {
-    color: 'white',
-    textAlignVertical: 'center',
-  },
-  answeredSwitchContainer: {
-    flexDirection: 'row',
-    marginTop: 5,
-  },
-  answeredText: {
-    color: 'white',
-    textAlignVertical: 'center',
   },
 });
