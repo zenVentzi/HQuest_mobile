@@ -42,10 +42,18 @@ export const SettingsStackNavigator = createStackNavigator(
   StackNavConfig
 );
 
+export const ProfileStackNavigator = createStackNavigator(
+  {
+    Profile: ProfileScreen,
+  },
+  StackNavConfig
+);
+
 const DrawerNavigator = createDrawerNavigator(
   {
     Home: HomeStackNavigator,
     Settings: SettingsStackNavigator,
+    Profile: ProfileStackNavigator,
   },
   {
     hideStatusBar: true,
