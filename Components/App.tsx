@@ -67,10 +67,11 @@ const DrawerNavigator = createDrawerNavigator(
   }
 );
 
-const AppContaner = createAppContainer(DrawerNavigator);
+const AppContainer = createAppContainer(DrawerNavigator);
 
+// export default App;
 export default class App extends Component {
   render() {
-    return <AppContaner />;
+    return <AppContainer />;
   }
 }

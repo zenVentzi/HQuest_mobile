@@ -1,15 +1,54 @@
 import React, { Fragment, Component } from 'react';
-import { Text, StyleSheet, View, Image } from 'react-native';
+import { Text, StyleSheet, View, Image, ScrollView } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import TextButton from './Reusable/TextButton';
-import Questions from './Questions';
+import Questions from './Questions/Questions';
 
 export default class ProfileScreen extends Component<any, any> {
   render() {
     const isPersonal = false;
 
+    // return (
+    //   <ScrollView>
+    //     <Text>
+    //       Profile Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits. Edit to change this screen and then come back to see your
+    //       edits.
+    //     </Text>
+    //   </ScrollView>
+    // );
+
     return (
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <TouchableOpacity>
           <Image style={styles.profilePic} source={require('./profile.png')} />
         </TouchableOpacity>
@@ -31,14 +70,16 @@ export default class ProfileScreen extends Component<any, any> {
           <TextButton title={`Followers`} onPress={() => {}} />
         </View>
         <Questions />
-      </View>
+        <Questions />
+        <Questions />
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: 'black',

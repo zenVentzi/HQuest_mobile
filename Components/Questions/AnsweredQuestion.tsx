@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Icon } from 'native-base';
+import Answer from './Answer';
 
 export default class AnsweredQuestion extends Component {
   render() {
@@ -20,6 +21,8 @@ export default class AnsweredQuestion extends Component {
             />
           </TouchableOpacity>
         </View>
+        {/* <Answer /> */}
+        {/* <View style={{ height: 500 }} /> */}
       </View>
     );
   }
