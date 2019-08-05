@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
   },
-  likesTextBtn: { height: 23, marginTop: 4 },
-  commentsTextBtn: { height: 23, marginTop: 4 },
+  likesTextBtn: { height: 23, marginTop: 4, marginLeft: 5 },
+  commentsTextBtn: { height: 23, marginTop: 4, marginLeft: 5 },
 });
