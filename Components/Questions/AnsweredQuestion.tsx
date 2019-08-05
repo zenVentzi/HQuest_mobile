@@ -21,7 +21,7 @@ export default class AnsweredQuestion extends Component {
             />
           </TouchableOpacity>
         </View>
-        {/* <Answer /> */}
+        <Answer />
         {/* <View style={{ height: 500 }} /> */}
       </View>
     );

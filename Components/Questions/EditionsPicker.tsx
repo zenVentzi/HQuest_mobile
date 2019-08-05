@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
-import { Form, Picker, Icon } from 'native-base';
+import { StyleSheet, View, Picker } from 'react-native';
 
 export default class EditionsPicker extends Component<any, any> {
   constructor(props: any) {
@@ -9,31 +8,32 @@ export default class EditionsPicker extends Component<any, any> {
     this.state = {};
   }
 
-  onValueChange = (itemValue: any, itemPosition: number) => {};
-
   render() {
+    console.log(this.state.selected);
     return (
-      <Fragment>
-        <Form>
-          <Picker
-            mode="dropdown"
-            iosIcon={<Icon name="arrow-down" />}
-            placeholder="Select your SIM"
-            placeholderStyle={{ color: '#bfc6ea' }}
-            placeholderIconColor="#007aff"
-            style={{ width: 200, backgroundColor: 'red' }}
-            selectedValue={this.state.selected}
-            onValueChange={this.onValueChange}>
-            <Picker.Item label="Wallet" value="key0" />
-            <Picker.Item label="ATM Card" value="key1" />
-            <Picker.Item label="Debit Card" value="key2" />
-            <Picker.Item label="Credit Card" value="key3" />
-            <Picker.Item label="Net Banking" value="key4" />
-          </Picker>
-        </Form>
-      </Fragment>
+      <View style={styles.container}>
+        <Picker
+          mode="dropdown"
+          style={styles.picker}
+          selectedValue={this.state.selected}
+          onValueChange={itemValue => {
+            this.setState({ selected: itemValue });
+          }}>
+          <Picker.Item label="1'st edition" value="key0" />
+          <Picker.Item label="2'nd edition" value="key4" />
+        </Picker>
+      </View>
     );
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    width: '100%',
+  },
+  picker: {
+    width: 150,
+    height: 30,
+  },
+});

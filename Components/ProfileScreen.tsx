@@ -8,45 +8,6 @@ export default class ProfileScreen extends Component<any, any> {
   render() {
     const isPersonal = false;
 
-    // return (
-    //   <ScrollView>
-    //     <Text>
-    //       Profile Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits. Edit to change this screen and then come back to see your
-    //       edits.
-    //     </Text>
-    //   </ScrollView>
-    // );
-
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <TouchableOpacity>
@@ -69,8 +30,6 @@ export default class ProfileScreen extends Component<any, any> {
           )}
           <TextButton title={`Followers`} onPress={() => {}} />
         </View>
-        <Questions />
-        <Questions />
         <Questions />
       </ScrollView>
     );
