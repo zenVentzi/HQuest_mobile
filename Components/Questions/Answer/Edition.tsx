@@ -1,12 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
-import EditionsPicker from './EditionsPicker';
 
-export default class Editions extends Component {
+export default class Edition extends Component {
   render() {
     return (
       <Fragment>
-        <EditionsPicker />
+        <Text>
+          - Well, things are the way they are. It is what it is. Fill this damn
+          space
+        </Text>
       </Fragment>
     );
   }

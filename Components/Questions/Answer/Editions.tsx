@@ -1,14 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
-import EditionsPicker from './EditionsPicker';
-import Editions from './Editions';
+import Edition from './Edition';
 
-export default class Answer extends Component {
+export default class Editions extends Component {
   render() {
     return (
       <Fragment>
-        <EditionsPicker />
-        <Editions />
+        <Edition />
       </Fragment>
     );
   }
