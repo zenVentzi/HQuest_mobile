@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'flex-start',
     flexWrap: 'wrap',
-    paddingLeft: 20,
-    paddingRight: 5,
+    paddingHorizontal: 20,
+    // paddingRight: 5,
   },
   questionRow: { flexDirection: 'row' },
   questionText: {
@@ -47,5 +47,6 @@ const styles = StyleSheet.create({
   },
   caretDown: {
     flex: 1,
+    marginRight: -10,
   },
 });

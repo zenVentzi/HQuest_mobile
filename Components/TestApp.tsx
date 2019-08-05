@@ -31,39 +31,31 @@ export default class TestApp extends Component {
     return (
       <Fragment>
         <ScrollView>
-          <Text>
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-            Edit to change this screen and then come back to see your edits.
-          </Text>
+          <View style={{ height: 10000, backgroundColor: 'red' }}>
+            <ScrollView
+              nestedScrollEnabled
+              contentContainerStyle={{
+                marginTop: '50%',
+                maxHeight: 50,
+                backgroundColor: 'blue',
+                flexDirection: 'column',
+                flexWrap: 'wrap',
+              }}>
+              {/* <View
+                style={{
+                  marginTop: 50,
+                  height: 300,
+                  backgroundColor: 'yellow',
+                }}
+              /> */}
+              <Text>asassa</Text>
+              <Text>asassa</Text>
+              <Text>asassa</Text>
+              <Text>asassa</Text>
+              <Text>asassa</Text>
+              <Text>asassa</Text>
+            </ScrollView>
+          </View>
         </ScrollView>
       </Fragment>
     );

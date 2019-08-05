@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, ScrollView } from 'react-native';
 import { Icon } from 'native-base';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import TextButton from '../../Reusable/TextButton';
+import Comments from './Comments';
 
 export default class Edition extends Component {
   render() {
@@ -27,6 +28,7 @@ export default class Edition extends Component {
             style={styles.commentsTextBtn}
           />
         </View>
+        <Comments />
       </Fragment>
     );
   }

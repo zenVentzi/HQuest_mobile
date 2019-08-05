@@ -1,0 +1,21 @@
+Show SuperScript Using
+<Text style={{fontSize: 15, lineHeight: 18}}>am</Text>
+1
+<Text style={{fontSize: 15, lineHeight: 18}}>am</Text>
+Show SubScript Using
+<Text style={{fontSize: 15, lineHeight: 37}}>am</Text>
+1
+<Text style={{fontSize: 15, lineHeight: 37}}>am</Text>
+
+
+Step 1.1: Go to project directory and run this command in terminal
+react-native bundle — dev false — platform android — entry-file index.js — bundle-output ./android/app/build/intermediates/assets/ debug/ index.android.bundle –assets-dest ./android/app/build /intermediates /res/ merged/debug
+( OR )
+Step 1: Go to project directory and run this command in terminal
+react-native bundle — platform android — dev false — entry-file index.js — bundle-output android/app/src/main/assets /index.android.bundle — assets-dest android/app/src/main/res
+Step 2: Go to android directory
+cd android/
+Step 3: In android path run this command
+./gradlew assembleDebug
+Step 4 : Go to this folder and check the apk file
+your_project-> android-> app-> build-> outputs-> apk-> debug-> app-debug.apk
