@@ -40,6 +40,7 @@ const StackNavConfig: StackNavigatorConfig = {
             style={styles.newsfeedBtn}
             onPress={() => {
               // navigation.openDrawer();
+              navigation.navigate('Profile');
             }}>
             <Icon
               type="FontAwesome"

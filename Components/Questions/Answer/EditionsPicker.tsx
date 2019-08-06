@@ -9,7 +9,6 @@ export default class EditionsPicker extends Component<any, any> {
   }
 
   render() {
-    console.log(this.state.selected);
     return (
       <View style={styles.container}>
         <Picker
