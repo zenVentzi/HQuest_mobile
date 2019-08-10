@@ -10,6 +10,7 @@ import SettingsScreen from './SettingsScreen';
 import React, { Component, Fragment } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Button, Icon } from 'native-base';
+import CustomDrawer from './CustomDrawer';
 
 const StackNavConfig: StackNavigatorConfig = {
   defaultNavigationOptions: {
@@ -109,14 +110,15 @@ const DrawerNavigator = createDrawerNavigator(
     Profile: ProfileStackNavigator,
   },
   {
-    hideStatusBar: true,
-    drawerBackgroundColor: 'black',
+    // hideStatusBar: true,
+    // drawerBackgroundColor: 'black',
     overlayColor: 'white',
     contentOptions: {
       activeTintColor: 'black',
       inactiveTintColor: 'white',
       activeBackgroundColor: 'white',
     },
+    contentComponent: CustomDrawer,
   }
 );
 
