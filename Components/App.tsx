@@ -4,18 +4,25 @@ import {
   createDrawerNavigator,
   StackNavigatorConfig,
 } from 'react-navigation';
+import Modal from 'react-native-modal';
 import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
 import SettingsScreen from './SettingsScreen';
 import React, { Component, Fragment } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Button, Icon } from 'native-base';
 import CustomDrawer from './CustomDrawer';
+import NotificationsScreen from './NotificationsScreen';
 
 const StackNavConfig: StackNavigatorConfig = {
   defaultNavigationOptions: {
     header: ({ navigation }) => (
       <View style={styles.container}>
+        {/* <Modal isVisible={true}>
+          <View style={{ backgroundColor: 'white', width: '70%' }}>
+            <Text style={{ color: 'black' }}>I am the modal content!</Text>
+          </View>
+        </Modal> */}
         <View style={styles.headerLeft}>
           <TouchableOpacity
             style={styles.drawerBtn}
@@ -52,7 +59,7 @@ const StackNavConfig: StackNavigatorConfig = {
           <TouchableOpacity
             style={styles.newsfeedBtn}
             onPress={() => {
-              // navigation.openDrawer();
+              navigation.navigate('Notifications');
             }}>
             <Icon
               type="FontAwesome"
@@ -103,11 +110,19 @@ export const ProfileStackNavigator = createStackNavigator(
   StackNavConfig
 );
 
+export const NotificationsStackNavigator = createStackNavigator(
+  {
+    Notifications: NotificationsScreen,
+  },
+  StackNavConfig
+);
+
 const DrawerNavigator = createDrawerNavigator(
   {
     Home: HomeStackNavigator,
     Settings: SettingsStackNavigator,
     Profile: ProfileStackNavigator,
+    Notifications: NotificationsStackNavigator,
   },
   {
     // hideStatusBar: true,
