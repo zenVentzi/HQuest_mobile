@@ -1,11 +1,8 @@
 package com.hquest_mobile;
 
-import com.reactnativenavigation.NavigationActivity;
-import com.facebook.react.ReactActivityDelegate;
-import com.facebook.react.ReactRootView;
-import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+import com.facebook.react.ReactActivity;
 
-public class MainActivity extends NavigationActivity {
+public class MainActivity extends ReactActivity {
 
     /**
      * Returns the name of the main component registered from JavaScript.
@@ -14,15 +11,5 @@ public class MainActivity extends NavigationActivity {
     @Override
     protected String getMainComponentName() {
         return "HQuest_mobile";
-    }
-
-    @Override
-    protected ReactActivityDelegate createReactActivityDelegate() {
-    return new ReactActivityDelegate(this, getMainComponentName()) {
-        @Override
-        protected ReactRootView createRootView() {
-        return new RNGestureHandlerEnabledRootView(MainActivity.this);
-        }
-    };
     }
 }
