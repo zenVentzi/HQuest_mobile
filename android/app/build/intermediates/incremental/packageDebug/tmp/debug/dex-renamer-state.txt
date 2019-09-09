@@ -1,0 +1,4 @@
+#Sat Aug 03 12:07:39 EEST 2019
+base.0=C\:\\Users\\ventzi\\Documents\\HQuest_mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
